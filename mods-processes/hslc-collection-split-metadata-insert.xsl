@@ -163,7 +163,7 @@
                     <xsl:message select="concat('Updated replacedBy at: ', $issue-title, ' with ', $issues-to-update/issues/issue[title[. = $issue-title]]/replacedBy[normalize-space()])"/>
                 </xsl:if>
                 <xsl:if test="$issues-to-update/issues/issue[title[. = $issue-title]]/description[normalize-space()]">
-                    <abstract xmlns="http://www.loc.gov/mods/v3" otherType="Is Replaced By" otherTypeAuthURI="http://dublincore.org/documents/2000/07/11/dcmes-qualifiers/">
+                    <abstract xmlns="http://www.loc.gov/mods/v3">
                             <xsl:value-of select="$issues-to-update/issues/issue[title[. = $issue-title]]/description[normalize-space()]"/>
                     </abstract>
                     <xsl:message select="concat('Updated description at: ', $issue-title, ' with ', $issues-to-update/issues/issue[title[. = $issue-title]]/description[normalize-space()])"/>
